@@ -5,6 +5,7 @@ export interface RegisterPayload {
     email: string;
     password: string;
     deviceId: string;
+    verificationCode?: string;
 }
 
 export interface RegisterResponse {
@@ -15,7 +16,10 @@ export interface RegisterResponse {
             id: string;
             username: string;
             email: string;
+            role: string;
         };
+        sessionId?: string;
+        deviceId?: string;
     };
 }
 
